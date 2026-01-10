@@ -1,3 +1,4 @@
+import './styles.css';
 import React, { useState, useEffect, useRef } from 'react';
 
 function Clock({ size = 20 }) {
