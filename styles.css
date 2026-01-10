@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    min-height: 100vh;
+    background: #013220;
+    font-size: 1.2rem;
+}
+
+.app-container {
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+
+.max-width-container {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #BCB88A;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px rgba(1, 68, 33, 0.5);
+}
+
+.header p {
+    color: #8A9A5B;
+}
+
+/* Card */
+.card {
+    background: #BCB88A;
+    border: 3px solid #013220;
+    border-top: 3px solid #8A9A5B;
+    border-left: 3px solid #8A9A5B;
+    box-shadow: 2px 2px 0px #013220;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 1rem;
+    }
+}
+
+/* Two Column Layout */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #013220;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #355E3B;
+    letter-spacing: 1px;
+}
+
+/* Saved Time Section */
+.saved-time-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.saved-time-icon {
+    color: #355E3B;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.saved-time-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #014421;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.break-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.btn-break {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: 2px solid #013220;
+    border-top: 2px solid #8A9A5B;
+    border-left: 2px solid #8A9A5B;
+    cursor: pointer;
+    transition: all 0.1s;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    flex: 1;
+    min-width: 100px;
+}
+
+.btn-break:active:not(:disabled) {
+    border-top: 2px solid #013220;
+    border-left: 2px solid #013220;
+    border-bottom: 2px solid #8A9A5B;
+    border-right: 2px solid #8A9A5B;
+    transform: translate(1px, 1px);
+}
+
+.btn-break:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-break-5 {
+    background: #8A9A5B;
+    color: #013220;
+}
+
+.btn-break-15 {
+    background: #8A9A5B;
+    color: #013220;
+}
+
+.btn-break-30 {
+    background: #8A9A5B;
+    color: #013220;
+}
+
+/* Timer Section */
+.timer-card {
+    padding: 2rem;
+}
+
+.task-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #013220;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.timer-display {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.timer-time {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #014421;
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+    .timer-time {
+        font-size: 3rem;
+    }
+}
+
+.timer-subtitle {
+    color: #355E3B;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .timer-controls {
+        flex-direction: column;
+    }
+    
+    .timer-controls .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: 3px solid #013220;
+    border-top: 3px solid #8A9A5B;
+    border-left: 3px solid #8A9A5B;
+    cursor: pointer;
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.btn:active {
+    border-top: 3px solid #013220;
+    border-left: 3px solid #013220;
+    border-bottom: 3px solid #8A9A5B;
+    border-right: 3px solid #8A9A5B;
+    transform: translate(1px, 1px);
+}
+
+.btn-primary {
+    background: #355E3B;
+    color: #BCB88A;
+}
+
+.btn-success {
+    background: #8A9A5B;
+    color: #013220;
+}
+
+.btn-secondary {
+    background: #014421;
+    color: #BCB88A;
+}
+
+/* Add Task Form */
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #013220;
+    border-top: 2px solid #355E3B;
+    border-left: 2px solid #355E3B;
+    outline: none;
+    font-size: 1.1rem;
+    font-family: 'VT323', monospace;
+    background: white;
+    color: #013220;
+}
+
+.input:focus {
+    border: 2px dotted #013220;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .input-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .input-row input:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Task List */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #8A9A5B;
+    border: 2px solid #013220;
+    border-top: 2px solid #BCB88A;
+    border-left: 2px solid #BCB88A;
+    transition: all 0.1s;
+}
+
+.task-item:hover {
+    background: #355E3B;
+}
+
+.task-item:hover .task-name,
+.task-item:hover .task-duration {
+    color: #BCB88A;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-name {
+    font-weight: bold;
+    color: #013220;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.task-duration {
+    font-size: 0.85rem;
+    color: #013220;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+/* Icons */
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.icon-lg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
