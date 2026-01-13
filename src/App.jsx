@@ -320,14 +320,14 @@ export default function App() {
                   disabled={savedTime < 900}
                   className="btn-break btn-break-15"
                 >
-                  TAKE 5 MIN BREAK
+                  TAKE 15 MIN BREAK
                 </button>
                 <button
                   onClick={() => useBreak(30)}
                   disabled={savedTime < 1800}
                   className="btn-break btn-break-30"
                 >
-                  TAKE 5 MIN BREAK
+                  TAKE 30 MIN BREAK
                 </button>
               </div>
             </div>
